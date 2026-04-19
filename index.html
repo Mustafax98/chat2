@@ -4,22 +4,8 @@
 <head>
     <meta charset="utf-8" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
-        rel="stylesheet" />
-    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
-        rel="stylesheet" />
-    <link rel="stylesheet" href="style.css">
-
-    <title>Quick-XOS Dashboard - CSS Version</title>
-
-
-
     <link
-        href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap"
-        rel="stylesheet" />
-    <link
-        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap"
         rel="stylesheet" />
     <link
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
@@ -31,441 +17,450 @@
             theme: {
                 extend: {
                     "colors": {
-                        "surface-container-lowest": "#ffffff",
-                        "surface-container-high": "#e1e9ee",
-                        "error-dim": "#4e0309",
-                        "primary-container": "#dde1ff",
-                        "outline": "#717c82",
-                        "secondary-container": "#d5e3fc",
-                        "on-tertiary-fixed": "#3e3a54",
-                        "background": "#f7f9fb",
-                        "on-secondary-container": "#455367",
-                        "primary-fixed-dim": "#cad2ff",
-                        "secondary-dim": "#465468",
-                        "tertiary": "#605c78",
-                        "tertiary-fixed": "#e3dbfd",
-                        "inverse-on-surface": "#9a9d9f",
-                        "on-tertiary-fixed-variant": "#5b5672",
-                        "surface-bright": "#f7f9fb",
-                        "on-tertiary-container": "#514d68",
-                        "surface-dim": "#cfdce3",
-                        "secondary-fixed": "#d5e3fc",
-                        "tertiary-container": "#e3dbfd",
-                        "surface-container-highest": "#d9e4ea",
-                        "on-primary": "#f8f7ff",
-                        "on-secondary": "#f8f8ff",
-                        "on-surface-variant": "#566166",
-                        "primary-dim": "#2848b7",
-                        "on-secondary-fixed": "#324053",
-                        "tertiary-dim": "#54506b",
-                        "on-secondary-fixed-variant": "#4e5c71",
-                        "secondary": "#526074",
-                        "inverse-primary": "#6d89fa",
-                        "on-error-container": "#752121",
-                        "surface-container-low": "#f0f4f7",
+                        "primary": "#3B82F6", // Vibrant Blue
+                        "primary-dim": "#2563EB",
+                        "secondary": "#6366F1", // Indigo
+                        "tertiary": "#10B981", // Fresh Green
+                        "warning": "#F59E0B", // Amber
                         "on-error": "#fff7f6",
-                        "on-primary-container": "#2747b6",
-                        "primary": "#3755c3",
-                        "surface-tint": "#3755c3",
-                        "on-tertiary": "#fcf7ff",
-                        "outline-variant": "#a9b4b9",
-                        "on-surface": "#2a3439",
-                        "on-background": "#2a3439",
-                        "surface": "#f7f9fb",
-                        "on-primary-fixed-variant": "#3352c0",
-                        "tertiary-fixed-dim": "#d4cdee",
-                        "surface-variant": "#d9e4ea",
-                        "primary-fixed": "#dde1ff",
-                        "surface-container": "#e8eff3",
-                        "secondary-fixed-dim": "#c7d5ed",
-                        "error-container": "#fe8983",
-                        "inverse-surface": "#0b0f10",
-                        "on-primary-fixed": "#0732a3",
-                        "error": "#9f403d"
+                        "outline-variant": "#e2e8f0",
+                        "surface-container-low": "#f8fafc",
+                        "primary-fixed-dim": "#bfd5ff",
+                        "surface-container": "#f1f5f9",
+                        "on-primary-container": "#1e40af",
+                        "error-container": "#fee2e2",
+                        "on-secondary-container": "#4338ca",
+                        "primary-container": "#dbeafe",
+                        "error": "#ef4444",
+                        "on-background": "#0f172a",
+                        "secondary-container": "#e0e7ff",
+                        "surface-variant": "#f1f5f9",
+                        "background": "#f8fafc",
+                        "surface-container-highest": "#f1f5f9",
+                        "surface-container-high": "#f1f5f9",
+                        "outline": "#94a3b8",
+                        "on-surface-variant": "#64748b",
+                        "on-secondary": "#ffffff",
+                        "secondary-fixed-dim": "#c7d2fe",
+                        "surface-container-lowest": "#ffffff",
+                        "on-primary": "#ffffff",
+                        "primary": "#3B82F6",
+                        "surface": "#f8fafc",
+                        "on-surface": "#0f172a",
+                        "surface-bright": "#ffffff",
+                        "surface-dim": "#e2e8f0",
+                        "inverse-surface": "#0f172a"
                     },
                     "borderRadius": {
                         "DEFAULT": "0.125rem",
-                        "lg": "0.25rem",
-                        "xl": "0.5rem",
-                        "full": "0.75rem"
+                        "lg": "0.5rem",
+                        "xl": "1rem",
+                        "full": "1.5rem"
                     },
                     "fontFamily": {
                         "headline": ["Manrope"],
                         "body": ["Inter"],
                         "label": ["Inter"]
                     }
-                },
-            },
+                }
+            }
         }
     </script>
     <style>
         .material-symbols-outlined {
             font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
-            vertical-align: middle;
         }
 
         body {
             font-family: 'Inter', sans-serif;
+            background-color: #f8fafc;
         }
 
         h1,
         h2,
-        h3,
-        .headline {
+        h3 {
             font-family: 'Manrope', sans-serif;
-        }
-
-        .no-line-rule {
-            border: none !important;
-        }
-
-        .tonal-shift-only {
-            border: none !important;
-        }
-
-        .ghost-border {
-            outline: 1px solid rgba(169, 180, 185, 0.15);
         }
     </style>
 </head>
 
+<body class="bg-surface text-on-surface min-h-screen flex overflow-hidden">
+    <!-- Main Content Area -->
+    <main class="flex-1 flex flex-col h-screen overflow-hidden">
+        <!-- TopAppBar -->
+        <header class="bg-white/80 backdrop-blur-md border-b border-slate-200 top-0 z-40 h-20">
+            <div class="flex justify-between items-center w-full px-8 h-full">
+                <div class="flex items-center gap-16 flex-1">
+                    <h1 class="font-['Manrope'] font-extrabold text-[#10b981] text-xl">Quick-XOS</h1>
+                    <!-- Search Bar -->
 
-<body class="bg-background text-on-background min-h-screen">
-
-    <header>
-        <div class="header-container">
-            <div class="header-top-row">
-                <div class="brand-section">
-                    <div class="brand-logo">
-                        <span class="logo-icon material-symbols-outlined">speed</span>
-                        Quick-XOS
-                    </div>
-                    <nav>
-                        <a class="active-link" href="/Main-Index copy.html.html">Dashboard</a>
-                        <a class="inactive-link" href="/Inventory/I-Index.html">Inventory</a>
-                        <a class="inactive-link" href="/Operation/O-Index.html">Operation</a>
-                        <a class="inactive-link" href="#">Stock</a>
-                        <a class="inactive-link" href="/Analytics/A-Index.html">Analytics</a>
-                        <a class="inactive-link" href="/Reports/R-Index.html">Reports</a>
-                        <a class="inactive-link" href="/Settings/S-Index.html">Settings</a>
+                    <nav style="display: flex;">
+                        <!-- Dashboard Active -->
+                        <a class="text-primary rounded-xl mx-1 p-3 flex items-center transition-transform active:scale-[0.98]"
+                            href="#">
+                            <span class="font-['Inter'] text-lg font-semibold tracking-wide">Dashboard</span>
+                        </a>
+                        <a class="text-slate-600 mx-1 p-3 flex items-center hover:bg-slate-50 rounded-xl transition-all duration-200"
+                            href="#">
+                            <span class="font-['Inter'] text-lg font-medium tracking-wide">Inventory</span>
+                        </a>
+                        <a class="text-slate-600 mx-1 p-3 flex items-center hover:bg-slate-50 rounded-xl transition-all duration-200"
+                            href="#">
+                            <span class="font-['Inter'] text-lg font-medium tracking-wide">Stock In/Out</span>
+                        </a>
+                        <a class="text-slate-600 mx-1 p-3 flex items-center hover:bg-slate-50 rounded-xl transition-all duration-200"
+                            href="#">
+                            <span class="font-['Inter'] text-lg font-medium tracking-wide">Report</span>
+                        </a>
+                        </a>
+                        <a class="text-slate-600 mx-1 p-3 flex items-center hover:bg-slate-50 rounded-xl transition-all duration-200"
+                            href="#">
+                            <span class="font-['Inter'] text-lg font-medium tracking-wide">Operation</span>
+                        </a>
+                        </a>
+                        <a class="text-slate-600 mx-1 p-3 flex items-center hover:bg-slate-50 rounded-xl transition-all duration-200"
+                            href="#">
+                            <span class="font-['Inter'] text-lg font-medium tracking-wide">Analytics</span>
+                        </a>
                     </nav>
                 </div>
-                <div class="header-actions">
-                    <div class="search-container">
-                        <span class="search-icon material-symbols-outlined">search</span>
-                        <input class="search-input" placeholder="Search operational data..." type="text" />
-                    </div>
-                    <div class="action-buttons">
-                        <button class="action-btn">
-                            <span class="material-symbols-outlined">notifications</span>
-                        </button>
-                        <button class="action-btn">
-                            <span class="material-symbols-outlined">help</span>
-                        </button>
-                    </div>
-                    <div class="profile-section">
-                        <div class="profile-text">
-                            <p class="profile-role">Employee</p>
-                            <p class="profile-name">Agent Name</p>
-                        </div>
-                        <div class="profile-avatar-container">
-                            <img alt="User profile avatar" class="profile-avatar"
-                                src="https://images.unsplash.com/photo-1595152772835-219674b2a8a6?&w=128&h=128&dpr=2&q=80" />
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="tonal-separation"></div>
-
-        <div class="secondbar">
-            <nav>
-                <a class="active-link" href="/Dashboard/Overview.html">Overview / نظرة عامة</a>
-                <a class="inactive-link" href="#">Financials / المالية</a>
-                <a class="inactive-link" href="#">Risk Monitoring / مراقبة المخاطر</a>
-            </nav>
-
-            <div style="display: flex; align-items: center; gap: 1rem;">
-                <div style="width: 10rem;">
-
-                    <div class="relative group">
-                        <select class="w-full bg-white border border-slate-200 text-slate-700 text-sm rounded-xl px-12 py-0.5 appearance-none cursor-pointer transition-all 
-                       hover:border-blue-400 hover:bg-blue-50/30
-                       focus:outline-none focus:ring-2 focus:ring-blue-100 focus:border-blue-500 shadow-sm">
-
-                            <option value="all" selected class="font-bold text-blue-600">جميع الفروع
-                            </option>
-                            <hr class="my-1">
-                            <option value="#">فرع 1 الرئيسي</option>
-                            <option value="#">فرع 2</option>
-                            <option value="#">فرع 3</option>
-                        </select>
-                    </div>
-                </div>
-                <button style="padding: 2px 10px ; border-radius: .5rem; background-color: #91c101; color: white; ">
-                    Export CSV
-                </button>
-            </div>
-
-        </div>
-    </header>
-
-    <!-- Main Canvas -->
-    <main class=" p-8 flex-1">
-        <div class="grid grid-cols-1 md:grid-cols-4 gap-4 mb-8">
-            <div
-                class="bg-surface-container-lowest p-5 rounded-xl flex flex-col justify-between h-32 relative overflow-hidden">
-                <span class="text-on-surface-variant text-xs font-semibold uppercase tracking-wider font-label">Total
-                    SKUs</span>
-
-                <div class="absolute top-4 right-4 text-primary font-bold text-xs">+3.2%</div>
-                <div style="display: flex; justify-content:space-between">
-                    <div class="flex items-baseline gap-2">
-                        <span class="text-3xl font-extrabold font-headline text-on-surface">1282</span>
-                    </div>
-                    <button
-                        class="bg-error text-white py-[2px] px-3 rounded-full text-[10px] font-bold flex items-center justify-center transition-all duration-200 hover:scale-95 hover:text-on-error-container hover:bg-error-container min-w-[60px]">
-                        CRITICAL
-                    </button>
-                </div>
-            </div>
-
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
                 <div
-                    class="bg-surface-container-lowest p-5 rounded-xl flex flex-col justify-between h-32 relative overflow-hidden">
-                    <span class="text-error text-xs font-semibold uppercase tracking-wider font-label">Low
-                        Stock</span>
-                    <div class="flex items-baseline gap-2">
-                        <span class="text-3xl font-extrabold font-headline text-error">24</span>
-                    </div>
-                    <div style="display: flex; justify-content: flex-end;">
-
-                        <button
-                            class="bg-error text-white py-[2px] px-3 rounded-full text-[10px] font-bold flex items-center justify-center transition-all duration-200 hover:scale-95 hover:text-on-error-container hover:bg-error-container min-w-[60px]">
-                            CRITICAL
-                        </button>
-                    </div>
+                    class="hidden lg:flex items-center bg-slate-100 rounded-xl px-4 py-1 w-96 border border-transparent focus-within:border-primary/30 focus-within:bg-white transition-all">
+                    <span class="material-symbols-outlined text-slate-400 mr-2" data-icon="search">search</span>
+                    <input class="bg-transparent border-none focus:ring-0 text-sm w-full placeholder-slate-400"
+                        placeholder="Search inventory..." type="text" />
                 </div>
-                <div
-                    class="bg-surface-container-lowest p-5 rounded-xl flex flex-col justify-between h-32 relative overflow-hidden">
-                    <span class="text-error text-xs font-semibold uppercase tracking-wider font-label text-error">Not
-                        Available</span>
-                    <div class="flex items-baseline gap-2">
-                        <span class="text-3xl font-extrabold font-headline text-error">18</span>
-                    </div>
-
-                    <div style="display: flex; justify-content: flex-end;">
-                        <button
-                            class="bg-error text-white py-[2px] px-3 rounded-full text-[10px] font-bold flex items-center justify-center transition-all duration-200 hover:scale-95 hover:text-on-error-container hover:bg-error-container min-w-[60px]">
-                            CRITICAL
-                        </button>
-                    </div>
-                </div>
-            </div>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
-                <div
-                    class="bg-surface-container-lowest p-5 rounded-xl flex flex-col justify-between h-32 relative overflow-hidden">
-                    <span class="text-on-surface-variant text-xs font-semibold uppercase tracking-wider font-label">Best
-                        selling</span>
-                    <div class="flex items-baseline gap-2">
-                        <span class="text-3xl font-extrabold font-headline text-on-surface">12</span>
-                    </div>
-                    <div style="display: flex; justify-content: flex-end;">
-                        <button
-                            class="bg-[#a3d800] hover:bg-[#91c101] text-black px-2 py-0.5 rounded-full text-[12px] font-bold transition-all duration-200 hover:scale-95"
-                            style="color: white; ; border-radius: 1rem; width: 50%;">View</button>
-                    </div>
-                </div>
-                <div
-                    class="bg-surface-container-lowest p-5 rounded-xl flex flex-col justify-between h-32 relative overflow-hidden">
-                    <span
-                        class="text-on-surface-variant text-xs font-semibold uppercase tracking-wider font-label">Lowest
-                        selling</span>
-                    <div class="flex items-baseline gap-2">
-                        <span class="text-3xl font-extrabold font-headline text-on-surface">18</span>
-                    </div>
-                    <div style="display: flex; justify-content: flex-end;">
-                        <button
-                            class="bg-[#a3d800] hover:bg-[#91c101] text-black px-2 py-0.5 rounded-full text-[12px] font-bold transition-all duration-200 hover:scale-95"
-                            style="color: white; ; border-radius: 1rem; width: 50%;">View</button>
-                    </div>
-                </div>
-
-            </div>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
-                <div
-                    class="bg-surface-container-lowest p-5 rounded-xl flex flex-col justify-between h-32 relative overflow-hidden">
-                    <span
-                        class="text-on-surface-variant text-xs font-semibold uppercase tracking-wider font-label">Active
-                        Products</span>
-                    <div class="flex items-baseline gap-2">
-                        <span class="text-3xl font-extrabold font-headline text-on-surface">1028</span>
-                    </div>
-                </div>
-                <div
-                    class="bg-surface-container-lowest p-5 rounded-xl flex flex-col justify-between h-32 relative overflow-hidden">
-                    <span
-                        class="text-on-surface-variant text-xs font-semibold uppercase tracking-wider font-label">In-Active
-                        Products</span>
-                    <div class="flex items-baseline gap-2">
-                        <span class="text-3xl font-extrabold font-headline text-on-surface">254</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div style="display: flex; justify-content: flex-end; gap: 1rem; ">
-            <div style="width: 75%;"
-                class="bg-surface-container-lowest rounded-xl overflow-hidden shadow-sm border border-slate-100">
-                <div class="p-6 border-b border-slate-50 flex justify-between items-center">
-                    <h3 class="text-sm font-extrabold text-primary uppercase tracking-widest">Warehouse Status</h3>
-                    <div class="flex gap-4">
-                        <div class="flex items-center gap-2 text-xs text-slate-500">
-                            <span class="w-3 h-3 rounded-full bg-emerald-600"></span> Good
-                        </div>
-                        <div class="flex items-center gap-2 text-xs text-slate-500">
-                            <span class="w-3 h-3 rounded-full bg-blue-600"></span> Stable
-                        </div>
-                        <div class="flex items-center gap-2 text-xs text-slate-500">
-                            <span class="w-3 h-3 rounded-full bg-error"></span> Critical
-                        </div>
-                    </div>
-                </div>
-                <div class="overflow-x-auto">
-                    <table class="w-full text-left border-collapse">
-                        <thead>
-                            <tr class="bg-surface-container-low">
-                                <th class="p-4 text-[10px] font-bold text-on-surface-variant uppercase tracking-widest">
-                                    Status</th>
-                                <th class="p-4 text-[10px] font-bold text-on-surface-variant uppercase tracking-widest">
-                                    Branch</th>
-                                <th class="p-4 text-[10px] font-bold text-on-surface-variant uppercase tracking-widest">
-                                    Zone</th>
-                                <th class="p-4 text-[10px] font-bold text-on-surface-variant uppercase tracking-widest">
-                                    Efficiency</th>
-                                    <th class="p-4 text-[10px] font-bold text-on-surface-variant uppercase tracking-widest">
-                                        Action</th>
-                                    </tr>
-                        </thead>
-                        <tbody class="divide-y divide-slate-50">
-                            <tr class="hover:bg-surface transition-colors cursor-pointer">
-                                <td class="p-4">
-                                    <span
-                                    class="inline-block w-2.5 h-2.5 rounded-full bg-tertiary-fixed-dim shadow-[0_0_8px_rgba(78,222,163,0.5)]"></span>
-                                </td>
-                                <td class="p-4 text-xs font-semibold text-primary">Cairo</td>
-                                <td class="p-4 text-xs text-primary font-medium">Zone A</td>
-                                <td class="p-4 text-xs">
-                                    <span class="font-bold text-emerald-600">98%</span>
-                                </td>
-                                <td class="p-4">
-                                    <button style="background-color: #a3d800; color: #3f5500; border-radius: .3rem; padding: .1rem .4rem; font-size: .8rem; font-weight: bold;">Request</button>
-                                </td>
-                            </tr>
-                            <tr class="hover:bg-surface transition-colors cursor-pointer">
-                                <td class="p-4">
-                                    <span
-                                        class="inline-block w-2.5 h-2.5 rounded-full bg-secondary shadow-[0_0_8px_rgba(55,85,195,0.4)]"></span>
-                                </td>
-                                <td class="p-4 text-xs font-semibold text-primary">Cairo</td>
-                                <td class="p-4 text-xs text-primary font-medium">Zone B</td>
-                                <td class="p-4 text-xs">
-                                    <span class="font-bold text-cyan-600">72%</span>
-                                </td>
-                                <td class="p-4">
-                                    <button style="background-color: #a3d800; color: #3f5500; border-radius: .3rem; padding: .1rem .4rem; font-size: .8rem; font-weight: bold;">Request</button>
-                                </td>
-                            </tr>
-                            <tr class="hover:bg-surface transition-colors cursor-pointer">
-                                <td class="p-4">
-                                    <span
-                                        class="inline-block w-2.5 h-2.5 rounded-full bg-error shadow-[0_0_8px_rgba(186,26,26,0.4)]"></span>
-                                </td>
-                                <td class="p-4 text-xs font-semibold text-primary">Cairo</td>
-                                <td class="p-4 text-xs text-primary font-medium">Zone C</td>
-                                <td class="p-4 text-xs">
-                                    <span class="font-bold text-error">12%</span>
-                                </td>
-                                <td class="p-4">
-                                    <button style="background-color: #a3d800; color: #576a22; border-radius: .3rem; padding: .1rem .4rem; font-size: .8rem; font-weight: bold;">Request</button>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-            </div>
-
-            <div style="width: 25%;" class="bg-surface-container-lowest rounded-xl p-6 overflow-hidden flex flex-col">
-                <div class="flex justify-between items-center mb-6">
-                    <h2 class="text-sm font-extrabold text-primary uppercase tracking-widest">Priority Alerts</h2>
-                    <span
-                        class="bg-error/10 text-error py-[2px] px-3 rounded-full text-[10px] font-bold flex items-center justify-center transition-all duration-200 ">
-                        Alert (3)
-                    </span>
-                </div>
-                <div class="space-y-4 flex-1">
-                    <div class="group hover:bg-surface-container-low p-3 rounded-lg transition-all cursor-pointer">
-                        <div class="flex justify-between items-start mb-2">
-                            <span class="text-xs font-bold text-primary">Titanium Chassis V2</span>
+                <div class="flex items-center gap-4">
+                    <div class="flex items-center space-x-2">
+                        <button class="p-2 text-slate-600 hover:bg-slate-100 rounded-full transition-colors relative">
+                            <span class="material-symbols-outlined" data-icon="notifications">notifications</span>
                             <span
-                                class="bg-error/10 text-error px-2 py-0.5 rounded text-[9px] font-bold uppercase">Critical</span>
-                        </div>
-                        <div class="flex justify-between text-[11px] text-on-surface-variant">
-                            <span>SKU: T-CH-0921</span>
-                            <span class="text-primary font-bold">Qty: 2</span>
-                        </div>
-                        <div class="mt-3 w-full bg-slate-100 h-1 rounded-full overflow-hidden">
-                            <div class="bg-error w-[15%] h-full"></div>
-                        </div>
+                                class="absolute top-2 right-2 w-2 h-2 bg-primary rounded-full border-2 border-white"></span>
+                        </button>
+                        <button class="p-2 text-slate-600 hover:bg-slate-100 rounded-full transition-colors">
+                            <span class="material-symbols-outlined" data-icon="settings">settings</span>
+                        </button>
                     </div>
-                    <div class="group hover:bg-surface-container-low p-3 rounded-lg transition-all cursor-pointer">
-                        <div class="flex justify-between items-start mb-2">
-                            <span class="text-xs font-bold text-primary">Optic Sensors (L-4)</span>
-                            <span
-                                class="bg-tertiary-fixed-dim/20 text-on-tertiary-container px-2 py-0.5 rounded text-[9px] font-bold uppercase">Restocking</span>
-                        </div>
-                        <div class="flex justify-between text-[11px] text-on-surface-variant">
-                            <span>SKU: OP-SEN-40</span>
-                            <span class="text-primary font-bold">Qty: 142</span>
-                        </div>
-                        <div class="mt-3 w-full bg-slate-100 h-1 rounded-full overflow-hidden">
-                            <div class="bg-tertiary-fixed-dim w-[85%] h-full"></div>
-                        </div>
-                    </div>
-                    <div class="group hover:bg-surface-container-low p-3 rounded-lg transition-all cursor-pointer">
-                        <div class="flex justify-between items-start mb-2">
-                            <span class="text-xs font-bold text-primary">Graphite Coolant</span>
-                            <span
-                                class="bg-secondary/10 text-secondary px-2 py-0.5 rounded text-[9px] font-bold uppercase">Re-Order</span>
-                        </div>
-                        <div class="flex justify-between text-[11px] text-on-surface-variant">
-                            <span>SKU: GR-CL-88</span>
-                            <span class="text-primary font-bold">Qty: 48</span>
-                        </div>
-                        <div class="mt-3 w-full bg-slate-100 h-1 rounded-full overflow-hidden">
-                            <div class="bg-secondary w-[40%] h-full"></div>
+                    <div class="relative inline-block">
+                        <button onclick="toggleUserMenu(event)"
+                            class="h-10 w-10 rounded-xl bg-slate-100 border border-slate-200 overflow-hidden focus:outline-none transition-transform active:scale-95">
+                            <img alt="Curator Profile" class="w-full h-full object-cover"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuA-6ZOtcZVjd0iDJ2L8Z0GdDRNFLL0luA2700mN9mhNnqgElOqSp9duYmltMgQ_maZ4eCc1kvMvqP3YnK_WAdPVyTrtzE5EjJEnREnyNxOEEZ5oCpc4nBE7QC5H9HbLDYtAxaSpnMGFaBEiK82NBFfCbTPAvG21qLyIsOHrlwjlb-jMzfkVRSQP5mdLrk11yRz3yqvFoML5WqbnGlX3HB7A0_iRomQJH7TbevcH3_OBmJh5uvJ9lcF6WZUsPyS849IzglcFGR4fWQ" />
+                        </button>
+
+                        <div id="userDropdown"
+                            class="hidden absolute right-0 mt-2 w-48 bg-white rounded-2xl shadow-xl border border-slate-100 py-2 z-[100] animate-in fade-in zoom-in duration-200 origin-top-left">
+                            <div class="px-4 py-2 border-b border-slate-50 mb-1">
+                                <p class="text-[10px] font-bold text-slate-400 uppercase tracking-widest">Account</p>
+                            </div>
+
+                            <a class="text-slate-600 mx-2 p-3 flex items-center gap-3 hover:bg-slate-50 rounded-xl transition-all duration-200"
+                                href="#">
+                                <span class="material-symbols-outlined text-sm"
+                                    data-icon="contact_support">contact_support</span>
+                                <span class="font-['Inter'] text-sm font-medium tracking-wide">Support</span>
+                            </a>
+
+                            <a class="text-red-600 mx-2 p-3 flex items-center gap-3 hover:bg-red-50 rounded-xl transition-all duration-200"
+                                href="#">
+                                <span class="material-symbols-outlined text-sm" data-icon="logout">logout</span>
+                                <span class="font-['Inter'] text-sm font-medium tracking-wide">Logout</span>
+                            </a>
                         </div>
                     </div>
                 </div>
-                <button
-                    class="w-full mt-6 py-3 border border-outline-variant/30 text-primary text-[10px] font-extrabold uppercase tracking-[0.2em] rounded-lg hover:bg-surface transition-colors">
-                    View Comprehensive Log
-                </button>
             </div>
+        </header>
+        <!-- Scrollable Content Canvas -->
+        <div class="flex-1 overflow-y-auto p-8 bg-background space-y-8">
+            <section class="grid grid-cols-1 md:grid-cols-4 gap-6">
+                <div class="col-span-1 bg-white p-8 rounded-3xl flex flex-col justify-between relative overflow-hidden">
+                    <div class="z-10">
+                        <p class="text-[#10b981] font-label text-sm uppercase tracking-widest">Stock Value</p>
+                        <h3 class="text-5xl font-headline font-extrabold text-[#10b981] mt-2">240.000</h3>
+                    </div>
+                    <div class="flex items-center gap-2 mt-4 text-tertiary font-bold">
+                        <span class="material-symbols-outlined text-sm" data-icon="trending_up">trending_up</span>
+                        <span>+12.5% vs last month</span>
+                    </div>
+                    <div class="absolute -right-4 -bottom-4 text-warning/5">
+                        <span class="material-symbols-outlined text-[120px]" data-icon="warning">warning</span>
+                    </div>
+                </div>
 
+                <div class="col-span-1 bg-white p-8 rounded-3xl flex flex-col justify-between relative overflow-hidden">
+                    <div class="z-10">
+                        <p class="text-slate-500 font-label text-sm uppercase tracking-widest">Total Curated
+                            Products</p>
+                        <h3 class="text-5xl font-headline font-extrabold text-primary mt-2">1,284</h3>
+                    </div>
+                    <div class="flex items-center gap-2 mt-4 text-tertiary font-bold">
+                        <span class="material-symbols-outlined text-sm" data-icon="trending_up">trending_up</span>
+                        <span>+12.5% vs last month</span>
+                    </div>
 
+                </div>
+                <!-- Low Stock Alert Card -->
+                <div
+                    class="col-span-1 bg-warning/10 border border-warning/20 p-8 rounded-3xl flex flex-col justify-between relative overflow-hidden">
+                    <div class="z-10">
+                        <div class="secf flex items-center justify-between gap-4 w-full">
+
+                            <p class="text-warning font-label text-sm uppercase tracking-widest leading-none">
+                                Low Stock Alerts
+                            </p>
+
+                            <div
+                                class="bg-warning text-white w-fit px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-tighter flex items-center gap-1 leading-none">
+                                <span class="material-symbols-outlined text-xs" data-icon="error"
+                                    style="font-variation-settings: 'FILL' 1;">error</span>
+                                Critical Attention
+                            </div>
+
+                        </div>
+                        <h3 class="text-5xl font-headline font-extrabold text-warning mt-2">24</h3>
+                    </div>
+                    <a class="text-warning font-bold text-sm flex items-center gap-1 group z-10" href="#">
+                        Review Alerts
+                        <span class="material-symbols-outlined text-sm group-hover:translate-x-1 transition-transform"
+                            data-icon="arrow_forward">arrow_forward</span>
+                    </a>
+                    <div class="absolute -right-4 -bottom-4 text-warning/5">
+                        <span class="material-symbols-outlined text-[120px]" data-icon="warning">warning</span>
+                    </div>
+                </div>
+                <!-- Micro Chart Card -->
+                <div
+                    class="col-span-1 bg-error/10 border border-error p-8 rounded-3xl flex flex-col justify-between shadow-[0_8px_30px_rgb(0,0,0,0.04)]">
+                    <div>
+                        <p class="text-slate-500 font-label text-sm uppercase tracking-widest mb-4">Not Available</p>
+                        <h3 class="text-5xl font-headline font-extrabold text-error mt-2">12</h3>
+                    </div>
+                    <div class="secf" style="display: flex; align-items: center; justify-content: space-between;">
+                        <a class="text-error font-bold text-sm flex items-center gap-1 group z-10" href="#">
+                            Review Alerts
+                            <span
+                                class="material-symbols-outlined text-sm group-hover:translate-x-1 transition-transform"
+                                data-icon="arrow_forward">arrow_forward</span>
+                        </a>
+                        <p class="text-[10px] text-error font-medium">Calculated in EGP: 42.850</p>
+                    </div>
+                </div>
+            </section>
+            <!-- Main Content Split -->
+            <section class="grid grid-cols-1 xl:grid-cols-3 gap-8">
+                <!-- Recent Transactions (List) -->
+                <div
+                    class="xl:col-span-2 bg-white border border-slate-100 rounded-3xl p-8 shadow-[0_8px_30px_rgb(0,0,0,0.04)] h-fit">
+                    <div class="flex justify-between items-center mb-8 px-2">
+                        <h3 class="text-2xl font-bold font-headline text-slate-900">Recent Transactions</h3>
+                        <button class="text-primary font-bold text-sm hover:underline">View All Activities</button>
+                    </div>
+                    <div class="space-y-3 max-h-[580px] overflow-y-auto pr-2 scrollbar-thin scrollbar-thumb-slate-200 scrollbar-track-transparent">
+                        <div
+                            class="bg-slate-50 border border-slate-100 p-6 rounded-2xl flex items-center justify-between group hover:bg-white hover:shadow-md transition-all">
+                            <div class="flex items-center gap-4">
+                                <div
+                                    class="w-12 h-12 rounded-xl bg-emerald-50 flex items-center justify-center text-emerald-600">
+                                    <span class="material-symbols-outlined">download</span>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-slate-900">Modern Leather Lounge Chair</h4>
+                                    <p class="text-xs text-slate-500">Ref: #INV-9283 • 2 hours ago</p>
+                                </div>
+                            </div>
+                            <div class="text-right">
+                                <p class="font-bold text-slate-900">+15 Units</p>
+                                <p class="text-xs text-emerald-600 font-semibold uppercase tracking-wider">Inbound</p>
+                            </div>
+                        </div>
+                        <div
+                            class="bg-slate-50 border border-slate-100 p-6 rounded-2xl flex items-center justify-between group hover:bg-white hover:shadow-md transition-all">
+                            <div class="flex items-center gap-4">
+                                <div
+                                    class="w-12 h-12 rounded-xl bg-emerald-50 flex items-center justify-center text-emerald-600">
+                                    <span class="material-symbols-outlined">download</span>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-slate-900">Modern Leather Lounge Chair</h4>
+                                    <p class="text-xs text-slate-500">Ref: #INV-9283 • 2 hours ago</p>
+                                </div>
+                            </div>
+                            <div class="text-right">
+                                <p class="font-bold text-slate-900">+15 Units</p>
+                                <p class="text-xs text-emerald-600 font-semibold uppercase tracking-wider">Inbound</p>
+                            </div>
+                        </div>
+                        <div
+                            class="bg-slate-50 border border-slate-100 p-6 rounded-2xl flex items-center justify-between group hover:bg-white hover:shadow-md transition-all">
+                            <div class="flex items-center gap-4">
+                                <div
+                                    class="w-12 h-12 rounded-xl bg-emerald-50 flex items-center justify-center text-emerald-600">
+                                    <span class="material-symbols-outlined">download</span>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-slate-900">Modern Leather Lounge Chair</h4>
+                                    <p class="text-xs text-slate-500">Ref: #INV-9283 • 2 hours ago</p>
+                                </div>
+                            </div>
+                            <div class="text-right">
+                                <p class="font-bold text-slate-900">+15 Units</p>
+                                <p class="text-xs text-emerald-600 font-semibold uppercase tracking-wider">Inbound</p>
+                            </div>
+                        </div>
+
+                        <div
+                            class="bg-slate-50 border border-slate-100 p-6 rounded-2xl flex items-center justify-between group hover:bg-white hover:shadow-md transition-all">
+                            <div class="flex items-center gap-4">
+                                <div
+                                    class="w-12 h-12 rounded-xl bg-red-50 flex items-center justify-center text-red-600">
+                                    <span class="material-symbols-outlined">upload</span>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-slate-900">Industrial Pendant Light</h4>
+                                    <p class="text-xs text-slate-500">Ref: #INV-9284 • 5 hours ago</p>
+                                </div>
+                            </div>
+                            <div class="text-right">
+                                <p class="font-bold text-red-600">-4 Units</p>
+                                <p class="text-xs text-red-600 font-semibold uppercase tracking-wider">Outbound</p>
+                            </div>
+                        </div>
+
+                        <div
+                            class="bg-slate-50 border border-slate-100 p-6 rounded-2xl flex items-center justify-between group hover:bg-white hover:shadow-md transition-all">
+                            <div class="flex items-center gap-4">
+                                <div
+                                    class="w-12 h-12 rounded-xl bg-blue-50 flex items-center justify-center text-blue-600">
+                                    <span class="material-symbols-outlined">inventory_2</span>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-slate-900">Minimalist Oak Desk</h4>
+                                    <p class="text-xs text-slate-500">Ref: #INV-9285 • Yesterday</p>
+                                </div>
+                            </div>
+                            <div class="text-right">
+                                <p class="font-bold text-slate-900">+42 Units</p>
+                                <p class="text-xs text-blue-600 font-semibold uppercase tracking-wider">Bulk Restock</p>
+                            </div>
+                        </div>
+                        <div
+                            class="bg-slate-50 border border-slate-100 p-6 rounded-2xl flex items-center justify-between group hover:bg-white hover:shadow-md transition-all">
+                            <div class="flex items-center gap-4">
+                                <div
+                                    class="w-12 h-12 rounded-xl bg-blue-50 flex items-center justify-center text-blue-600">
+                                    <span class="material-symbols-outlined">inventory_2</span>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-slate-900">Minimalist Oak Desk</h4>
+                                    <p class="text-xs text-slate-500">Ref: #INV-9285 • Yesterday</p>
+                                </div>
+                            </div>
+                            <div class="text-right">
+                                <p class="font-bold text-slate-900">+42 Units</p>
+                                <p class="text-xs text-blue-600 font-semibold uppercase tracking-wider">Bulk Restock</p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                
+                <!-- Stock Summary / Status Sidebar -->
+                <div class="space-y-6">
+                    <div
+                        class="col-span-1 bg-white border border-slate-100 p-8 rounded-3xl flex flex-col justify-between shadow-[0_8px_30px_rgb(0,0,0,0.04)]">
+                        <div>
+                            <p class="text-slate-500 font-label text-sm uppercase tracking-widest mb-4">Stock Value
+                                Trend
+                            </p>
+                            <div class="flex items-end gap-1.5 h-20">
+                                <div class="bg-secondary/20 w-full rounded-t-md h-[40%] transition-all hover:h-[45%]">
+                                </div>
+                                <div class="bg-secondary/20 w-full rounded-t-md h-[60%] transition-all hover:h-[65%]">
+                                </div>
+                                <div class="bg-secondary/40 w-full rounded-t-md h-[50%] transition-all hover:h-[55%]">
+                                </div>
+                                <div class="bg-secondary/60 w-full rounded-t-md h-[80%] transition-all hover:h-[85%]">
+                                </div>
+                                <div class="bg-secondary/40 w-full rounded-t-md h-[70%] transition-all hover:h-[75%]">
+                                </div>
+                                <div class="bg-secondary w-full rounded-t-md h-[100%] transition-all hover:h-[95%]">
+                                </div>
+                            </div>
+                        </div>
+                        <p class="text-[10px] text-slate-400 font-medium mt-4">Calculated in USD: $428,500.00</p>
+                    </div>
+                    <div class="bg-slate-900 text-white p-8 rounded-3xl shadow-xl relative overflow-hidden">
+                        <div class="relative z-10">
+                            <h3 class="text-xl font-bold font-headline mb-4">Warehouse Capacity</h3>
+                            <div class="w-full bg-slate-700 h-3 rounded-full mb-3 overflow-hidden">
+                                <div class="bg-primary h-full w-[78%]"></div>
+                            </div>
+                            <div class="flex justify-between text-xs font-semibold">
+                                <span class="text-slate-400 uppercase tracking-widest">Used: 7,842 sq/ft</span>
+                                <span class="text-primary font-bold">78% Full</span>
+                            </div>
+                        </div>
+                        <div class="absolute -right-4 top-0 text-white/5 pointer-events-none">
+                            <span class="material-symbols-outlined text-[100px]" data-icon="factory">factory</span>
+                        </div>
+                    </div>
+                    <div class="bg-white border border-slate-100 p-8 rounded-3xl shadow-[0_8px_30px_rgb(0,0,0,0.04)]">
+                        <h3 class="text-lg font-bold font-headline mb-6 text-slate-900">Quick Actions</h3>
+                        <div class="grid grid-cols-2 gap-4">
+                            <button
+                                class="bg-slate-50 border border-slate-100 p-4 rounded-2xl flex flex-col items-center gap-2 hover:bg-primary hover:text-white hover:border-primary transition-all group">
+                                <span
+                                    class="material-symbols-outlined text-primary group-hover:text-white group-hover:scale-110 transition-all"
+                                    data-icon="barcode_scanner">barcode_scanner</span>
+                                <span class="text-[10px] font-bold uppercase tracking-wider">Scan Item</span>
+                            </button>
+                            <button
+                                class="bg-slate-50 border border-slate-100 p-4 rounded-2xl flex flex-col items-center gap-2 hover:bg-primary hover:text-white hover:border-primary transition-all group">
+                                <span
+                                    class="material-symbols-outlined text-primary group-hover:text-white group-hover:scale-110 transition-all"
+                                    data-icon="assignment_late">assignment_late</span>
+                                <span class="text-[10px] font-bold uppercase tracking-wider">Stock Audit</span>
+                            </button>
+                            <button
+                                class="bg-slate-50 border border-slate-100 p-4 rounded-2xl flex flex-col items-center gap-2 hover:bg-primary hover:text-white hover:border-primary transition-all group">
+                                <span
+                                    class="material-symbols-outlined text-primary group-hover:text-white group-hover:scale-110 transition-all"
+                                    data-icon="local_shipping">local_shipping</span>
+                                <span class="text-[10px] font-bold uppercase tracking-wider">Shipments</span>
+                            </button>
+                            <button
+                                class="bg-slate-50 border border-slate-100 p-4 rounded-2xl flex flex-col items-center gap-2 hover:bg-primary hover:text-white hover:border-primary transition-all group">
+                                <span
+                                    class="material-symbols-outlined text-primary group-hover:text-white group-hover:scale-110 transition-all"
+                                    data-icon="print">print</span>
+                                <span class="text-[10px] font-bold uppercase tracking-wider">Print Labels</span>
+                            </button>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
         </div>
-
     </main>
+    <script>
+        function toggleUserMenu(event) {
+            // منع الحدث من الانتقال للأب (عشان القائمة متقفلش فوراً)
+            event.stopPropagation();
+            const menu = document.getElementById('userDropdown');
 
-    <!-- FAB for Quick Actions -->
-    <button
-        class="fixed bottom-8 right-8 bg-primary hover:bg-primary-dim text-white w-14 h-14 rounded-full shadow-xl flex items-center justify-center transition-all scale-100 active:scale-95 group">
-        <span class="material-symbols-outlined text-2xl group-hover:rotate-90 transition-transform"
-            data-icon="add">add</span>
-    </button>
+            // تبديل ظهور القائمة
+            menu.classList.toggle('hidden');
+        }
 
-
+        // إغلاق القائمة عند الضغط في أي مكان خارجها
+        window.onclick = function (event) {
+            const menu = document.getElementById('userDropdown');
+            if (!event.target.closest('#userDropdown')) {
+                menu.classList.add('hidden');
+            }
+        }
+    </script>
 </body>
 
 </html>
