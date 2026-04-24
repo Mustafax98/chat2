@@ -1,0 +1,640 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "primary": "#3B82F6", // Vibrant Blue
+                        "primary-dim": "#2563EB",
+                        "secondary": "#6366F1", // Indigo
+                        "tertiary": "#10B981", // Fresh Green
+                        "warning": "#F59E0B", // Amber
+                        "on-error": "#fff7f6",
+                        "outline-variant": "#e2e8f0",
+                        "surface-container-low": "#f8fafc",
+                        "primary-fixed-dim": "#bfd5ff",
+                        "surface-container": "#f1f5f9",
+                        "on-primary-container": "#1e40af",
+                        "error-container": "#fee2e2",
+                        "on-secondary-container": "#4338ca",
+                        "primary-container": "#dbeafe",
+                        "error": "#ef4444",
+                        "on-background": "#0f172a",
+                        "secondary-container": "#e0e7ff",
+                        "surface-variant": "#f1f5f9",
+                        "background": "#f8fafc",
+                        "surface-container-highest": "#f1f5f9",
+                        "surface-container-high": "#f1f5f9",
+                        "outline": "#94a3b8",
+                        "on-surface-variant": "#64748b",
+                        "on-secondary": "#ffffff",
+                        "secondary-fixed-dim": "#c7d2fe",
+                        "surface-container-lowest": "#ffffff",
+                        "on-primary": "#ffffff",
+                        "primary": "#3B82F6",
+                        "surface": "#f8fafc",
+                        "on-surface": "#0f172a",
+                        "surface-bright": "#ffffff",
+                        "surface-dim": "#e2e8f0",
+                        "inverse-surface": "#0f172a"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.5rem",
+                        "xl": "1rem",
+                        "full": "1.5rem"
+                    },
+                    "fontFamily": {
+                        "headline": ["Manrope"],
+                        "body": ["Inter"],
+                        "label": ["Inter"]
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8fafc;
+        }
+
+        h1,
+        h2,
+        h3 {
+            font-family: 'Manrope', sans-serif;
+        }
+    </style>
+</head>
+
+<body class="bg-surface text-on-surface min-h-screen flex overflow-hidden">
+    <!-- Main Content Area -->
+    <main class="flex-1 flex flex-col h-screen overflow-hidden">
+        <!-- TopAppBar -->
+        <header class="bg-white/80 backdrop-blur-md border-b border-slate-200 top-0 z-40 h-20">
+            <div class="flex justify-between items-center w-full px-8 h-full">
+                <div class="flex items-center gap-16 flex-1">
+                    <h1 class="font-['Manrope'] font-extrabold text-[#10b981] text-xl">Quick-XOS</h1>
+                    <!-- Search Bar -->
+
+                    <nav style="display: flex; align-items: center;">
+                        <!-- Dashboard Active -->
+                        <a class="text-slate-600  mx-1 p-2 flex items-center hover:bg-slate-50 rounded-xl transition-all duration-200"
+                            href="index.html">
+                            <span class="font-['Inter'] text-lg font-medium tracking-wide">Dashboard</span>
+                        </a>
+
+                        <div class="relative group p-2">
+                            <button
+                                class="flex items-center gap-1 text-lg text-primary hover:text-primary font-semibold transition-colors">
+                                <span>Inventory</span>
+                            </button>
+
+                            <div
+                                class="absolute left-0 mt-1 w-48 bg-white border border-slate-100 rounded-2xl shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+                                <div class="p-2 space-y-1">
+                                    <a href="Overview-inventory-D.html"
+                                        class="flex items-center gap-3 px-3 py-2.5 text-sm text-slate-600 rounded-xl hover:bg-slate-50 hover:text-primary transition-all">
+                                        Overview
+                                    </a>
+
+                                    <a href="#"
+                                        class="flex items-center gap-3 px-3 py-2.5 text-sm text-slate-600 rounded-xl hover:bg-slate-50 hover:text-primary transition-all">
+                                        Items Managment
+                                    </a>
+
+                                    <a href="#"
+                                        class="flex items-center gap-3 px-3 py-2.5 text-sm text-slate-600 rounded-xl hover:bg-slate-50 hover:text-primary transition-all">
+                                        Category Managment
+                                    </a>
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <a class="text-slate-600 mx-1 p-2 flex items-center hover:bg-slate-50 rounded-xl transition-all duration-200"
+                            href="#">
+                            <span class="font-['Inter'] text-lg font-medium tracking-wide">Operation</span>
+                        </a>
+                        <a class="text-slate-600 mx-1 p-2 flex items-center hover:bg-slate-50 rounded-xl transition-all duration-200"
+                            href="#">
+                            <span class="font-['Inter'] text-lg font-medium tracking-wide">Report</span>
+                        </a>
+                        <a class="text-slate-600 mx-1 p-2 flex items-center hover:bg-slate-50 rounded-xl transition-all duration-200"
+                            href="#">
+                            <span class="font-['Inter'] text-lg font-medium tracking-wide">Analytics</span>
+                        </a>
+                    </nav>
+                </div>
+                <div
+                    class="hidden lg:flex items-center bg-slate-100 rounded-xl px-4 py-1 w-96 border border-transparent focus-within:border-primary/30 focus-within:bg-white transition-all">
+                    <span class="material-symbols-outlined text-slate-400 mr-2" data-icon="search">search</span>
+                    <input class="bg-transparent border-none focus:ring-0 text-sm w-full placeholder-slate-400"
+                        placeholder="Search inventory..." type="text" />
+                </div>
+                <div class="flex items-center gap-4">
+                    <div class="flex items-center space-x-2">
+                        <button class="p-2 text-slate-600 hover:bg-slate-100 rounded-full transition-colors relative">
+                            <span class="material-symbols-outlined" data-icon="notifications">notifications</span>
+                            <span
+                                class="absolute top-2 right-2 w-2 h-2 bg-primary rounded-full border-2 border-white"></span>
+                        </button>
+                        <button class="p-2 text-slate-600 hover:bg-slate-100 rounded-full transition-colors">
+                            <span class="material-symbols-outlined" data-icon="settings">settings</span>
+                        </button>
+                    </div>
+                    <div class="relative inline-block">
+                        <button onclick="toggleUserMenu(event)"
+                            class="h-10 w-10 rounded-xl bg-slate-100 border border-slate-200 overflow-hidden focus:outline-none transition-transform active:scale-95">
+                            <img alt="Curator Profile" class="w-full h-full object-cover"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuA-6ZOtcZVjd0iDJ2L8Z0GdDRNFLL0luA2700mN9mhNnqgElOqSp9duYmltMgQ_maZ4eCc1kvMvqP3YnK_WAdPVyTrtzE5EjJEnREnyNxOEEZ5oCpc4nBE7QC5H9HbLDYtAxaSpnMGFaBEiK82NBFfCbTPAvG21qLyIsOHrlwjlb-jMzfkVRSQP5mdLrk11yRz3yqvFoML5WqbnGlX3HB7A0_iRomQJH7TbevcH3_OBmJh5uvJ9lcF6WZUsPyS849IzglcFGR4fWQ" />
+                        </button>
+
+                        <div id="userDropdown"
+                            class="hidden absolute right-0 mt-2 w-48 bg-white rounded-2xl shadow-xl border border-slate-100 py-2 z-[100] animate-in fade-in zoom-in duration-200 origin-top-left">
+                            <div class="px-4 py-2 border-b border-slate-50 mb-1">
+                                <p class="text-[10px] font-bold text-slate-400 uppercase tracking-widest">Account</p>
+                            </div>
+
+                            <a class="text-slate-600 mx-2 p-3 flex items-center gap-3 hover:bg-slate-50 rounded-xl transition-all duration-200"
+                                href="#">
+                                <span class="material-symbols-outlined text-sm"
+                                    data-icon="contact_support">contact_support</span>
+                                <span class="font-['Inter'] text-sm font-medium tracking-wide">Support</span>
+                            </a>
+
+                            <a class="text-red-600 mx-2 p-3 flex items-center gap-3 hover:bg-red-50 rounded-xl transition-all duration-200"
+                                href="#">
+                                <span class="material-symbols-outlined text-sm" data-icon="logout">logout</span>
+                                <span class="font-['Inter'] text-sm font-medium tracking-wide">Logout</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- Scrollable Content Canvas -->
+        <div class="flex-1 overflow-y-auto p-8 bg-background space-y-8">
+
+            <div class="sec"
+                style="display: flex; justify-content: space-between; width: 100%; gap: 1rem; align-items: center;">
+
+                <section class="grid grid-cols-1 md:grid-cols-2 gap-6" style="width: 70%;">
+                    <div class="lg:col-span-4 grid grid-cols-3 gap-4">
+                        <div
+                            class="h-[120px] w-[350px] bg-surface-container-lowest p-6 rounded-xl shadow-sm border-l-4 border-primary">
+                            <p class="text-[14px] font-bold uppercase tracking-wider text-on-surface-variant mb-1">
+                                Category Value
+                            </p>
+                            <p class="text-xl font-extrabold text-primary">LE 412,850</p>
+                            <p class="text-[10px] text-tertiary-fixed-dim font-bold mt-1">+12% vs LY</p>
+                        </div>
+                        <div
+                            class="h-[120px] w-[350px] bg-surface-container-lowest p-6 rounded-xl shadow-sm border-l-4 border-secondary">
+                            <p class="text-[14px] font-bold uppercase tracking-wider text-on-surface-variant mb-1">Units
+                                in Category</p>
+                            <p class="text-xl font-extrabold text-primary">1,240</p>
+                            <p class="text-[10px] text-error font-bold mt-1">-85 units/week</p>
+                        </div>
+                        <div
+                            class="h-[120px] w-[350px] bg-surface-container-lowest p-6 rounded-xl shadow-sm border-l-4 border-primary">
+                            <p class="text-[14px] font-bold uppercase tracking-wider text-on-surface-variant mb-1">
+                                Demand
+                            </p>
+                            <p class="text-xl font-extrabold text-primary">98.4%</p>
+                            <p class="text-[10px] text-on-surface-variant font-bold mt-1">Tier 1 Rating</p>
+                        </div>
+
+                    </div>
+
+                </section>
+                <!-- Stock Summary / Status Sidebar -->
+                <div class="space-y-6" style="width: 30%;">
+                    <div class="bg-white border border-slate-100 rounded-3xl" style="padding: 1rem;">
+                        <div class="grid grid-cols-3 gap-4">
+                            <button
+                                class="bg-slate-50 border border-slate-100 p-4 rounded-2xl flex flex-col items-center gap-2 hover:bg-primary hover:text-white hover:border-primary transition-all group">
+                                <span
+                                    class="material-symbols-outlined text-primary group-hover:text-white group-hover:scale-110 transition-all"
+                                    data-icon="local_shipping">local_shipping</span>
+                                <span class="text-[10px] font-bold uppercase tracking-wider">Shipment Request</span>
+                            </button>
+                            <button
+                                class="bg-slate-50 border border-slate-100 p-4 rounded-2xl flex flex-col items-center gap-2 hover:bg-primary hover:text-white hover:border-primary transition-all group">
+                                <span
+                                    class="material-symbols-outlined text-primary group-hover:text-white group-hover:scale-110 transition-all"
+                                    data-icon="assignment_late">assignment_late</span>
+                                <span class="text-[10px] font-bold uppercase tracking-wider">Stock Audit</span>
+                            </button>
+                            <button
+                                class="bg-slate-50 border border-slate-100 p-4 rounded-2xl flex flex-col items-center gap-2 hover:bg-primary hover:text-white hover:border-primary transition-all group">
+                                <span
+                                    class="material-symbols-outlined text-primary group-hover:text-white group-hover:scale-110 transition-all"
+                                    data-icon="print">print</span>
+                                <span class="text-[10px] font-bold uppercase tracking-wider">Print report</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Main Content Split -->
+            <section class="grid grid-cols-1 xl:grid-cols-3 gap-4" style="display: flex; width: 100%;">
+                <!-- Recent Transactions (List) -->
+                <div style="width: 35%;"
+                    class="xl:col-span-1 bg-white border border-slate-100 rounded-3xl p-8 shadow-[0_8px_30px_rgb(0,0,0,0.04)] h-fit">
+                    <div class="flex justify-between items-center mb-8 px-2">
+                        <h3 class="text-[22px] font-bold font-headline text-slate-900">Category Items</h3>
+                        <div class="second" style="display: flex; align-items: center; width: 60%; gap: 1rem;">
+
+
+
+                            <div class="relative max-w-xs group">
+                                <div class="absolute inset-y-0 left-0 pl-2.5 flex items-center pointer-events-none">
+                                    <span
+                                        class="material-symbols-outlined text-slate-400 group-focus-within:text-primary transition-colors text-sm">
+                                        search
+                                    </span>
+                                </div>
+                                <input type="text" placeholder="Search items..."
+                                    class="block w-full pl-7 pr-2 py-2 bg-slate-50 border border-slate-100 rounded-xl text-sm placeholder-slate-400 focus:outline-none focus:bg-white focus:ring-4 focus:ring-primary/5 focus:border-primary transition-all shadow-sm">
+                            </div>
+                            <div class="relative inline-block text-left group">
+                                <button
+                                    class="inline-flex items-center gap-1 px-3 py-3 bg-white border border-slate-200 text-slate-700 font-semibold text-sm rounded-xl shadow-sm hover:bg-slate-50 transition-all">
+                                    <span>Categories</span>
+                                    <span class="material-symbols-outlined text-sm">expand_more</span>
+                                </button>
+
+                                <div
+                                    class="absolute right-0 mt-2 w-56 origin-top-right bg-white border border-slate-100 rounded-2xl shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+                                    <div class="p-2 space-y-1">
+
+                                        <a href="#"
+                                            class="flex items-center gap-3 px-3 py-2 text-sm text-red-600 rounded-lg hover:bg-red-50 transition-colors">
+                                            Category 3
+                                        </a>
+
+                                        <a href="#"
+                                            class="flex items-center gap-3 px-3 py-2 text-sm text-slate-600 rounded-lg hover:bg-slate-50 hover:text-primary transition-colors">
+                                            Category 1
+                                        </a>
+
+                                        <a href="#"
+                                            class="flex items-center gap-3 px-3 py-2 text-sm text-slate-600 rounded-lg hover:bg-slate-50 hover:text-primary transition-colors">
+                                            Category 2
+                                        </a>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+
+                    <div
+                        class="space-y-2 max-h-[580px] overflow-y-auto pr-2 scrollbar-thin scrollbar-thumb-slate-200 scrollbar-track-transparent">
+                        <button
+                            class="bg-slate-50 border border-slate-100 p-4 rounded-2xl justify-between group hover:bg-white hover:shadow-md transition-all"
+                            style="width: 100%; display: flex; align-items: center;">
+                            <div class="flex items-center gap-4 min-w-[250px] text-left">
+                                <div
+                                    class="w-12 h-12 rounded-xl bg-emerald-50 flex items-center justify-center text-emerald-600">
+                                    <span class="material-symbols-outlined">inventory_2</span>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-slate-900">Product 1</h4>
+                                    <p class="text-xs text-slate-500">Ref: #INV-9283</p>
+                                </div>
+                            </div>
+                            <div class="text-right">
+                                <p class="font-bold text-slate-900">15 Units</p>
+                                <p class="text-xs text-emerald-600 font-semibold uppercase tracking-wider">Stable
+                                </p>
+                            </div>
+                        </button>
+
+                        <button
+                            class="bg-slate-50 border border-slate-100 p-4 rounded-2xl justify-between group hover:bg-white hover:shadow-md transition-all"
+                            style="width: 100%; display: flex; align-items: center;">
+                            <div class="flex items-center gap-4 min-w-[250px] text-left">
+                                <div
+                                    class="w-12 h-12 rounded-xl bg-emerald-50 flex items-center justify-center text-emerald-600 group-hover:bg-emerald-100 transition-colors">
+                                    <span class="material-symbols-outlined">inventory_2</span>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-slate-900">Product 2</h4>
+                                    <p class="text-xs text-slate-500">Ref: #INV-9283</p>
+                                </div>
+                            </div>
+                            <div class="text-right">
+                                <p class="font-bold text-slate-900">20 Units</p>
+                                <p class="text-xs text-emerald-600 font-semibold uppercase tracking-wider">stable
+                                </p>
+                            </div>
+                        </button>
+                        <button
+                            class="bg-slate-50 border border-slate-100 p-4 rounded-2xl justify-between group hover:bg-white hover:shadow-md transition-all"
+                            style="width: 100%; display: flex; align-items: center;">
+                            <div class="flex items-center gap-4 min-w-[250px] text-left">
+                                <div
+                                    class="w-12 h-12 rounded-xl bg-emerald-50 flex items-center justify-center text-emerald-600">
+                                    <span class="material-symbols-outlined">inventory_2</span>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-slate-900">Product 3</h4>
+                                    <p class="text-xs text-slate-500">Ref: #INV-9283</p>
+                                </div>
+                            </div>
+                            <div class="text-right">
+                                <p class="font-bold text-slate-900">11 Units</p>
+                                <p class="text-xs text-emerald-600 font-semibold uppercase tracking-wider">stable
+                                </p>
+                            </div>
+                        </button>
+
+                        <button
+                            class="bg-slate-50 border border-slate-100 p-4 rounded-2xl justify-between group hover:bg-white hover:shadow-md transition-all"
+                            style="width: 100%; display: flex; align-items: center;">
+                            <div class="flex items-center gap-4 min-w-[250px] text-left">
+                                <div
+                                    class="w-12 h-12 rounded-xl bg-red-50 flex items-center justify-center text-red-600">
+                                    <span class="material-symbols-outlined">inventory_2</span>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-slate-900">Product 4</h4>
+                                    <p class="text-xs text-slate-500">Ref: #INV-9284</p>
+                                </div>
+                            </div>
+                            <div class="text-right">
+                                <p class="font-bold text-red-600">4 Units</p>
+                                <p class="text-xs text-red-600 font-semibold uppercase tracking-wider">Low Stock</p>
+                            </div>
+                        </button>
+
+                        <button
+                            class="bg-slate-50 border border-slate-100 p-4 rounded-2xl justify-between group hover:bg-white hover:shadow-md transition-all"
+                            style="width: 100%; display: flex; align-items: center;">
+                            <div class="flex items-center gap-4 min-w-[250px] text-left">
+                                <div
+                                    class="w-12 h-12 rounded-xl bg-blue-50 flex items-center justify-center text-blue-600">
+                                    <span class="material-symbols-outlined">inventory_2</span>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-slate-900">Product 5</h4>
+                                    <p class="text-xs text-slate-500">Ref: #INV-9285</p>
+                                </div>
+                            </div>
+                            <div class="text-right">
+                                <p class="font-bold text-slate-900">42 Units</p>
+                                <p class="text-xs text-blue-600 font-semibold uppercase tracking-wider">Excess Stock
+                                </p>
+                            </div>
+                        </button>
+                        <button
+                            class="bg-slate-50 border border-slate-100 p-4 rounded-2xl justify-between group hover:bg-white hover:shadow-md transition-all"
+                            style="width: 100%; display: flex; align-items: center;">
+                            <div class="flex items-center gap-4 min-w-[250px] text-left">
+                                <div
+                                    class="w-12 h-12 rounded-xl bg-blue-50 flex items-center justify-center text-blue-600">
+                                    <span class="material-symbols-outlined">inventory_2</span>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-slate-900">Product 6</h4>
+                                    <p class="text-xs text-slate-500">Ref: #INV-9285</p>
+                                </div>
+                            </div>
+                            <div class="text-right">
+                                <p class="font-bold text-slate-900">74 Units</p>
+                                <p class="text-xs text-blue-600 font-semibold uppercase tracking-wider">Excess Stock
+                                </p>
+                            </div>
+                        </button>
+                        <button
+                            class="bg-slate-50 border border-slate-100 p-4 rounded-2xl justify-between group hover:bg-white hover:shadow-md transition-all"
+                            style="width: 100%; display: flex; align-items: center;">
+                            <div class="flex items-center gap-4 min-w-[250px] text-left">
+                                <div
+                                    class="w-12 h-12 rounded-xl bg-blue-50 flex items-center justify-center text-blue-600">
+                                    <span class="material-symbols-outlined">inventory_2</span>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-slate-900">Product 7</h4>
+                                    <p class="text-xs text-slate-500">Ref: #INV-9285</p>
+                                </div>
+                            </div>
+                            <div class="text-right">
+                                <p class="font-bold text-slate-900">74 Units</p>
+                                <p class="text-xs text-blue-600 font-semibold uppercase tracking-wider">Excess Stock
+                                </p>
+                            </div>
+                        </button>
+                    </div>
+                </div>
+                <div class="sec" style="display: block; width: 65%;">
+
+                    <!-- Recent Transactions (List) -->
+                    <div style="margin-bottom: 1rem;"
+                        class="xl:col-span-2 bg-white border border-slate-100 rounded-3xl p-8 shadow-[0_8px_30px_rgb(0,0,0,0.04)] h-fit">
+                        <div class="flex justify-between items-center mb-4 px-1">
+                            <h3 class="text-2xl font-bold font-headline text-slate-900">Item Information - Product 1
+                            </h3>
+                            <span
+                                class="material-symbols-outlined text-outline cursor-pointer hover:text-primary transition-colors">edit</span>
+                        </div>
+
+                        <div
+                            class="space-y-3 max-h-[580px] overflow-y-auto pr-2 scrollbar-thin scrollbar-thumb-slate-200 scrollbar-track-transparent">
+                            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-y-8 gap-x-12">
+                                <div class="flex flex-col space-y-2">
+                                    <label class="ext-[14px] uppercase tracking-widest text-outline font-bold">
+                                        Item Image
+                                    </label>
+                                    <span class="material-symbols-outlined text-primary text-3xl block">
+                                        image
+                                    </span>
+                                </div>
+                                <div class="space-y-1">
+                                    <label class="text-[14px] uppercase tracking-widest text-outline font-bold">Name
+                                        Item</label>
+                                    <p class="text-[14px] font-semibold text-on-surface">Product 1</p>
+                                </div>
+
+                                <div class="space-y-1">
+                                    <label class="text-[14px] uppercase tracking-widest text-outline font-bold">Element
+                                        Category</label>
+                                    <p class="text-[14px] font-semibold text-on-surface">Category 1</p>
+                                </div>
+                                <div class="space-y-1">
+                                    <label class="text-[14px] uppercase tracking-widest text-outline font-bold">Base
+                                        Unit</label>
+                                    <p class="text-[14px] font-semibold text-on-surface">liter</p>
+                                </div>
+                                <div class="space-y-1">
+                                    <label
+                                        class="text-[14px] uppercase tracking-widest text-outline font-bold">Quantity</label>
+                                    <p class="text-[14px] font-semibold text-on-surface">14</p>
+                                </div>
+
+                                <div class="space-y-1">
+                                    <label
+                                        class="text-[14px] uppercase tracking-widest text-outline font-bold">Supplier</label>
+                                    <p class="text-[14px] font-semibold text-secondary">Advanced Alloy Corp.</p>
+                                </div>
+                                <div class="space-y-1">
+                                    <label
+                                        class="text-[14px] uppercase tracking-widest text-outline font-bold">Lifecycle
+                                        Phase</label>
+                                    <p class="text-[14px] font-semibold text-on-surface">Active - Production</p>
+                                </div>
+                                <div class="space-y-1">
+                                    <label class="text-[14px] uppercase tracking-widest text-outline font-bold">Purchase
+                                        price</label>
+                                    <p class="text-[14px] font-semibold text-on-surface">150 LE</p>
+                                </div>
+                                <div class="space-y-1">
+                                    <label class="text-[14px] uppercase tracking-widest text-outline font-bold">selling
+                                        price</label>
+                                    <p class="text[14px] font-semibold text-on-surface">180 LE</p>
+                                </div>
+                                <div class="space-y-1">
+                                    <label class="text-[14px] uppercase tracking-widest text-outline font-bold">Total
+                                        Units
+                                        Cost</label>
+                                    <p class="text-[14px] font-semibold text-on-surface">2.100 LE</p>
+                                </div>
+                            </div>
+
+                            <div class="First"
+                                style="display: flex; align-items: center; justify-content: space-between; margin-top:3rem ;">
+
+                                <div class="border-t border-outline-variant/20 flex flex-wrap gap-12">
+                                    <div class="flex items-center gap-4">
+                                        <div class="bg-surface-container p-2 rounded-lg"><span
+                                                class="material-symbols-outlined text-primary">calendar_today</span>
+                                        </div>
+                                        <div>
+                                            <p class="text-[10px] uppercase tracking-widest text-outline font-bold">
+                                                Inbound
+                                                Date</p>
+                                            <p class="text-xs font-bold text-on-surface">Oct 12, 2023</p>
+                                        </div>
+                                    </div>
+                                    <div class="flex items-center gap-4">
+                                        <div class="bg-surface-container p-2 rounded-lg"><span
+                                                class="material-symbols-outlined text-primary">verified</span></div>
+                                        <div>
+                                            <p class="text-[10px] uppercase tracking-widest text-outline font-bold">
+                                                Expiry date
+                                            </p>
+                                            <p class="text-xs font-bold text-on-surface">Oct 12, 2026</p>
+                                        </div>
+                                    </div>
+                                    <div class="flex items-center gap-4">
+                                        <div class="bg-surface-container p-2 rounded-lg"><span
+                                                class="material-symbols-outlined text-primary">package_2</span></div>
+                                        <div>
+                                            <p class="text-[10px] uppercase tracking-widest text-outline font-bold">
+                                                Batch
+                                                Number</p>
+                                            <p class="text-xs font-bold text-on-surface">LOT-88219-X</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <button class="text-primary font-bold text-sm hover:underline">View Activities</button>
+
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="chart" style="background-color: white; padding: 1rem; border-radius: 1rem;">
+                        <div class="w-full">
+                            <div class="flex justify-between items-end mb-2">
+                                <p class="text-[14px] font-bold uppercase tracking-widest text-outline">Order Velocity
+                                </p>
+                                <p class="text-sm font-extrabold text-emerald-600">0.42%</p>
+                            </div>
+
+                            <div class="relative h-16 bg-surface-container rounded-lg overflow-hidden">
+                                <svg class="absolute inset-0 h-full w-full" viewBox="0 0 400 64"
+                                    preserveAspectRatio="none">
+                                    <path
+                                        d="M0 64 L40 58 L80 60 L120 45 L160 55 L200 40 L240 45 L280 30 L320 20 L360 25 L400 15"
+                                        fill="none" stroke="#ba1a1a" stroke-width="2"
+                                        vector-effect="non-scaling-stroke">
+                                    </path>
+                                    <path
+                                        d="M0 64 L40 58 L80 60 L120 45 L160 55 L200 40 L240 45 L280 30 L320 20 L360 25 L400 15 V64 H0 Z"
+                                        fill="url(#grad1)" opacity="0.1"></path>
+                                    <defs>
+                                        <linearGradient id="grad1" x1="0%" x2="0%" y1="0%" y2="100%">
+                                            <stop offset="0%" style="stop-color:#ba1a1a;stop-opacity:1"></stop>
+                                            <stop offset="100%" style="stop-color:#ba1a1a;stop-opacity:0"></stop>
+                                        </linearGradient>
+                                    </defs>
+                                </svg>
+                            </div>
+
+                            <div class="flex justify-between mt-2">
+                                <span class="text-[8px] font-bold text-outline">JAN</span>
+                                <span class="text-[8px] font-bold text-outline">FEB</span>
+                                <span class="text-[8px] font-bold text-outline">MAR</span>
+                                <span class="text-[8px] font-bold text-outline">APR</span>
+                                <span class="text-[8px] font-bold text-outline">MAY</span>
+                                <span class="text-[8px] font-bold text-outline">JUN</span>
+                                <span class="text-[8px] font-bold text-outline">JUL</span>
+                                <span class="text-[8px] font-bold text-outline">AUG</span>
+                                <span class="text-[8px] font-bold text-outline">SEP</span>
+                                <span class="text-[8px] font-bold text-outline">OCT</span>
+                                <span class="text-[8px] font-bold text-outline">NOV</span>
+                                <span class="text-[8px] font-bold text-outline">DEC</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+            </section>
+        </div>
+    </main>
+    <script>
+        function toggleUserMenu(event) {
+            // منع الحدث من الانتقال للأب (عشان القائمة متقفلش فوراً)
+            event.stopPropagation();
+            const menu = document.getElementById('userDropdown');
+
+            // تبديل ظهور القائمة
+            menu.classList.toggle('hidden');
+        }
+
+        // إغلاق القائمة عند الضغط في أي مكان خارجها
+        window.onclick = function (event) {
+            const menu = document.getElementById('userDropdown');
+            if (!event.target.closest('#userDropdown')) {
+                menu.classList.add('hidden');
+            }
+        }
+    </script>
+</body>
+
+</html>
